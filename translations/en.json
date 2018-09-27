@@ -1,8 +1,8 @@
 {
   "app": {
-    "name": "Zen Tunes",
-    "short_description": "Play the famous zen tunes in your help desk.",
-    "long_description": "Play the famous zen tunes in your help desk and \n listen to the beats it has to offer.",
+    "name": "Notely",
+    "short_description": "App to record notes of various types against a user",
+    "long_description": "App to record notes of various types against a user \n as an event that shows up in the \n customer context interaction history.",
     "installation_instructions": "Simply click install."
   }
 }

@@ -1,14 +1,7 @@
-# Zendesk Sunset
+# Notely
 
-Record end user activity using the Events API.
-
-### The following information is displayed:
-
-* info1
-* info2
-* info3
-
-Please submit bug reports to [Insert Link](). Pull requests are welcome.
+Record user activity using the Events API.
 
 ### Screenshot(s):
+
 [put your screenshots down here.]

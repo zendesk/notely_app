@@ -1,12 +1,12 @@
 {
-  "name": "Zendesk Sunset",
+  "name": "Notely",
   "author": {
-    "name": "zendesk",
+    "name": "octillery",
     "email": "jalviso@zendesk.com",
     "url": "https://www.zendesk.com"
   },
   "defaultLocale": "en",
-  "private": true,
+  "private": false,
   "location": {
     "support": {
       "ticket_sidebar": "assets/iframe.html"
