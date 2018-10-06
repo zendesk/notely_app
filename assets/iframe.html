@@ -17,11 +17,11 @@
 <body>
   <label class="c-txt__label">Type</label>
   <select class="c-menu c-txt__input c-txt__input--select" id="type">
-    <option value="sunset_call">Call</option>
-    <option value="sunset_email">Email</option>
-    <option value="sunset_event">Event</option>
-    <option value="sunset_meeting">Meeting</option>
-    <option value="sunset_note" selected>Note</option>
+    <option value="call">Call</option>
+    <option value="email">Email</option>
+    <option value="event">Event</option>
+    <option value="meeting">Meeting</option>
+    <option value="note" selected>Note</option>
   </select>
   <label class="c-txt__label">Note</label>
   <textarea class="c-txt__input c-txt__input--area" id="note" placeholder="Type your note here" rows="4"></textarea>
@@ -45,6 +45,7 @@
           function recordActivity() {
             var note = document.getElementById('note');
             var type = document.getElementById('type');
+            var description = "[" + type.value + "] " + note.value;
 
             if (note.value === '') return;
 
@@ -56,7 +57,8 @@
               data: JSON.stringify({
                 "user_id": requesterId,
                 "type": type.value,
-                "source": "zendesk_sunset",
+                "source": "notely",
+                "description": description,
                 "properties": {
                   "author": author,
                   "note": note.value,
