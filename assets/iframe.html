@@ -12,6 +12,9 @@
     .c-txt__input {
       margin-bottom: 12px;
     }
+    textarea#note {
+      background-color: rgb(255, 246, 217);
+    }
   </style>
 </head>
 <body>
@@ -24,7 +27,7 @@
     <option value="note" selected>Note</option>
   </select>
   <label class="c-txt__label">Note</label>
-  <textarea class="c-txt__input c-txt__input--area" id="note" placeholder="Type your note here" rows="4"></textarea>
+  <textarea class="c-txt__input c-txt__input--area" id="note" placeholder="Record a private note about this user" rows="4"></textarea>
   <button class="c-btn c-btn--primary" id="submit">Record Activity</button>
   <!-- https://github.com/zendesk/zendesk_app_framework_sdk -->
   <script type="text/javascript" src="https://assets.zendesk.com/apps/sdk/2.0/zaf_sdk.js"></script>
@@ -36,6 +39,8 @@
 
     client.on('app.registered', function(appData) {
       client.get('currentUser.name').then(user => {
+
+        // if the location is ticket_sidebar
         client.get('ticket.requester.id').then(ticket => {
           var requesterId = String(ticket['ticket.requester.id']);
           var author = String(user['currentUser.name']);
