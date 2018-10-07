@@ -13,7 +13,7 @@
       margin-bottom: 12px;
     }
     textarea#note {
-      background-color: rgb(255, 246, 217);
+      background: rgb(255, 248, 237);
     }
   </style>
 </head>
@@ -39,10 +39,9 @@
 
     client.on('app.registered', function(appData) {
       client.get('currentUser.name').then(user => {
-
-        // if the location is ticket_sidebar
-        client.get('ticket.requester.id').then(ticket => {
-          var requesterId = String(ticket['ticket.requester.id']);
+        // if the location is user_sidebar
+        client.get('user.id').then(userProfile => {
+          var profileId = String(userProfile['user.id']);
           var author = String(user['currentUser.name']);
 
           var button = document.getElementById('submit')
@@ -50,7 +49,7 @@
           function recordActivity() {
             var note = document.getElementById('note');
             var type = document.getElementById('type');
-            var description = "[" + type.value + "] " + note.value;
+            var description = '[' + type.value + '] ' + note.value;
 
             if (note.value === '') return;
 
@@ -60,7 +59,7 @@
               dataType: 'json',
               contentType: 'application/json',
               data: JSON.stringify({
-                "user_id": requesterId,
+                "user_id": profileId,
                 "type": type.value,
                 "source": "notely",
                 "description": description,
