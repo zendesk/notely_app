@@ -37,7 +37,7 @@ Run the local dev server
 zat server
 ```
 
-Open a browser and go to your local Zendesk instance subdomain. Append `?zat=true` to the end of your instance's url
+Open a browser and go to your Zendesk subdomain. Append `?zat=true` to the end of your instance's url
 
 <img src="./images/url.png" width="800">
 
