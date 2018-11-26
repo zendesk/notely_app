@@ -12,7 +12,7 @@ Notely is a sample Zendesk App that allows you to record note events using the E
 
 ## Installing the app as is
 
-To run the app in your local Zendesk instance
+To run the app on your Zendesk subdomain
 
 1. Download the zip of the app
 <img src="./images/download.png" width="400">
